@@ -33,7 +33,7 @@ export const Dashboard = () => {
     }
 
     return (
-        <div className="space-y-8 animate-fade-in">
+        <div className="h-full overflow-y-auto pr-2 space-y-8 animate-fade-in scrollbar-thin">
             <div>
                 <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight lg:text-5xl bg-gradient-to-r from-primary to-indigo-600 bg-clip-text text-transparent">
                     Welcome back, {dashboardData?.userName.split(' ')[0] || 'Jane'}
@@ -82,7 +82,7 @@ export const Dashboard = () => {
                         </div>
                         <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight leading-tight">Start a new AI conversation</h2>
                         <p className="text-muted-foreground mb-10 max-w-md text-lg leading-relaxed">
-                            Experience the power of our next-gen AI. Upload documents, analyze data, or just chat. Our models are ready to assist you.
+                            Experience the power of our next-gen AI. Analyze data, or just chat. Our models are ready to assist you.
                         </p>
                         <Button
                             size="lg"

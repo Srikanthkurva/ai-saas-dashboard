@@ -32,7 +32,7 @@ export const ChatLayout = () => {
 
     return (
         <div className={cn(
-            "flex flex-col h-[calc(100vh-100px)] md:h-[calc(100vh-120px)] rounded-2xl md:rounded-3xl border border-border bg-card/50 backdrop-blur-md shadow-2xl overflow-hidden transition-all duration-500",
+            "flex flex-col h-full rounded-2xl md:rounded-3xl border border-border bg-card/50 backdrop-blur-md shadow-2xl overflow-hidden transition-all duration-500",
             isFullscreen ? "fixed inset-0 md:inset-4 z-50 h-screen md:h-[calc(100vh-32px)] ml-0 rounded-none md:rounded-3xl" : "relative"
         )}>
             {/* Chat Header */}
@@ -43,7 +43,6 @@ export const ChatLayout = () => {
                     </div>
                     <div>
                         <h2 className="font-bold text-base md:text-lg leading-none">AI Copilot</h2>
-                        <span className="text-[9px] md:text-[10px] uppercase font-bold text-primary tracking-widest mt-1 inline-block">GPT-4 Turbo</span>
                     </div>
                 </div>
                 <div className="flex items-center gap-2">
@@ -63,9 +62,6 @@ export const ChatLayout = () => {
             >
                 {chatHistory.length === 0 && (
                     <div className="h-full flex flex-col items-center justify-center text-center max-w-md mx-auto py-20 px-4 space-y-6 animate-fade-in">
-                        <div className="h-20 w-20 rounded-3xl bg-primary/10 flex items-center justify-center text-primary text-4xl mb-2 shadow-inner border border-primary/20">
-                            <Sparkles size={40} />
-                        </div>
                         <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight">How can I help you today?</h3>
                         <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
                             Ask me anything from code snippets and architectural advice to generating full project plans. I'm here to superpower your development.

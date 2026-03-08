@@ -1,14 +1,11 @@
 import { Link, useLocation } from 'react-router-dom'
-import { LayoutDashboard, MessageSquare, BarChart2, FileUp, Settings, LogOut, ChevronLeft, ChevronRight, Moon, Sun } from 'lucide-react'
+import { LayoutDashboard, MessageSquare, LogOut, ChevronLeft, ChevronRight, Moon, Sun } from 'lucide-react'
 import { useStore } from '../../store/useStore'
 import { Button, cn } from '../ui/Button'
 
 const navItems = [
     { icon: LayoutDashboard, label: 'Dashboard', path: '/' },
     { icon: MessageSquare, label: 'Chat', path: '/chat' },
-    { icon: BarChart2, label: 'Analytics', path: '/analytics' },
-    { icon: FileUp, label: 'File Upload', path: '/upload' },
-    { icon: Settings, label: 'Settings', path: '/settings' },
 ]
 
 export const Sidebar = () => {

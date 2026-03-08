@@ -37,7 +37,7 @@ export const fetchDashboardData = async (): Promise<DashboardData> => {
             { id: '1', title: 'Market analysis generated', time: '2 mins ago', type: 'ai' },
             { id: '2', title: 'New data source connected', time: '45 mins ago', type: 'system' },
             { id: '3', title: 'Project proposal drafted', time: '2 hours ago', type: 'ai' },
-            { id: '4', title: 'Document uploaded: Q1_Report.pdf', time: '5 hours ago', type: 'user' },
+            { id: '4', title: 'Data query executed', time: '5 hours ago', type: 'user' },
         ]
     };
 };
