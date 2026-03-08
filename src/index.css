@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --background-foreground: #0f172a;
+    --primary: #0ea5e9;
+    --primary-foreground: #ffffff;
+    --secondary: #f1f5f9;
+    --secondary-foreground: #0f172a;
+    --accent: #f1f5f9;
+    --accent-foreground: #0f172a;
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --border: #e2e8f0;
+    --input: #e2e8f0;
+    --ring: #0ea5e9;
+    --radius: 0.75rem;
+  }
+
+  /* Optimize base font sizes for mobile-first */
+  html {
+    font-size: 14px;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  .dark {
+    --background: #020617;
+    --background-foreground: #f8fafc;
+    --primary: #0ea5e9;
+    --primary-foreground: #ffffff;
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
+    --card: #0f172a;
+    --card-foreground: #f8fafc;
+    --border: #334155;
+    --input: #334155;
+    --ring: #0ea5e9;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-background-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.glassmorphism {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.dark .glassmorphism {
+  @apply bg-slate-900/40 backdrop-blur-md border border-slate-700/30;
+}
+
+/* Responsive Layout Utilities */
+@layer utilities {
+  .mobile-sidebar-padding {
+    @apply pl-0 md:pl-64;
+  }
+
+  .mobile-sidebar-collapsed-padding {
+    @apply pl-0 md:pl-16;
+  }
+}
